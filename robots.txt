@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /
+Sitemap: https://learnoids.co.uk/sitemap.xml
