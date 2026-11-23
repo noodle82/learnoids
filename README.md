@@ -1,33 +1,29 @@
 # Learnoids
 
-A small, self-contained website for learnoids.co.uk. The apps and their saved data are separate from this site.
+Static source for learnoids.co.uk, hosted on GitHub Pages from main / root. The apps and their saved data are separate from this website.
 
 ## Edit and build
 
-Node.js 22 or later. No package installation is required.
+Node.js 22 or later; no package installation is required. Run npm run build to generate 13 pages plus the 404 page. Run npm run check to check local links and basic content.
 
-Run `npm run build` to generate the 12 pages. Run `npm run check` to check local links and content. Edit `site-config.json` for the operator, email, dates, public launch status and public App Store links. The page templates are in `build.js`; policies are in `content/legal.js`; styling is in `styles.css`. Rebuild after editing templates or configuration. Editing generated HTML directly will be overwritten by the next build.
+Edit site-config.json for contact details and availability. Page templates are in build.js, Multiploids templates in content/multiploids.js, and policies in content/legal.js. Shared styling is in styles.css; scoped Multiploids styling is in multiploids.css. Rebuild after editing source. Generated HTML is overwritten on rebuild.
 
-The site works as ordinary static HTML and CSS without JavaScript. It uses local fonts and rendered images of the existing app characters. It does not install a service worker, save browser data, use analytics, embed third-party widgets or submit forms. Support links open the visitor’s email app.
+The site uses static HTML, CSS, local fonts and local artwork. It installs no service worker, browser storage, analytics, third-party widgets or forms. Support opens the visitor's email app.
 
-## Launch status
+## Availability
 
-Public App Store URLs are not yet supplied. Both app pages therefore say “App Store launch coming soon” and do not contain pretend download buttons. Set the correct links once the apps have public product pages. TestFlight invite links are not used as public-release links.
+Multiploids: Times Tables v1.0.0 is described as coming soon. Only set multiploidsApproved to true after Apple approval, and only set multiploidsAppStoreUrl to the live public apps.apple.com product URL. Both conditions are required before its download button appears. Do not use TestFlight invitation links for public availability. Spelloids availability is maintained separately.
 
-`publicLaunch` is false for the review copy, which keeps search engines out. After approving the content and preparing the site for publication, set it to true and rebuild to allow indexing. This does not change either app or activate payments.
+publicLaunch controls search indexing only; it does not approve an app, activate payments or enable a download link.
 
-Use a separate GitHub repository called `learnoids`. Upload the website files at its top level, then publish from main / root with GitHub Pages. Do not upload these files into practimals, multiploids or jollybox. See the separate GoDaddy setup guide.
+## Product and privacy information
 
-## Policy review
+Updated on 23 November 2026 for Multiploids v1.0.0: ages 5–11, numbered rockets, five preparation activities, twelve correct facts for launch, Cosmo Hop, two starter Starbase games and one for each different numbered rocket launched, practice customisation rewards and a weekly suit earned through 20 different practice questions.
 
-The operator is Mark Atkin and the supplied support/privacy contact is support@bluffle.co.uk. The texts are drafts based on the local Spelloids 0.19.0 and Multiploids 0.4.2 code available on 16 November 2026, with UK-oriented privacy/consumer wording and Apple’s current requirements. They are not a certification of legal compliance. Confirm they match the exact builds submitted to Apple, the actual hosting/email arrangements and your support retention practices before publishing. If the operator becomes a company, add its correct registered details and address. Confirm any business/service-address disclosures that apply to your operation; no home address has been invented or published.
+Mark Atkin operates Learnoids; support and privacy enquiries go to support@bluffle.co.uk. Multiploids is free, with no advertising, in-app purchases or third-party analytics. Core learning and built-in speech work offline; progress is local, with no accounts or device syncing. Website hosting and optional support email are explained separately in the notices. If app data practices or hosting change, update the policies and App Store disclosures before publishing those changes.
 
-GitHub Pages is the proposed static information host, so its IP/security logging is disclosed. If another host is chosen, update those sections before publishing. A privacy link is also needed inside each app’s grown-up section, in addition to the App Store Connect URL. This website project does not modify either app. Parent-only links/purchases must respect the app’s parental gate.
+Spelloids' existing artwork and visual theme are retained. Multiploids uses the supplied mint three-eyed logo and app icon. Social cards use local artwork. Private review access details must never be published in this repository.
 
-If future releases add accounts, cloud sync, analytics, online speech or purchases, review the policies, privacy labels and actual child-data processing before deploying those changes. The current site takes no payments and makes no “free forever” promise.
+## Validation
 
-## Checks performed
-
-All 12 pages loaded in a real desktop browser. Home/app/support/privacy/terms pages were checked at 1440, 1024, 768, 390 and 320-pixel widths, with no horizontal overflow. Keyboard skip navigation, reduced motion, image loading, local links, no third-party requests and no site cookies/local storage were checked. These checks do not constitute a full accessibility or legal audit; no physical iPad test was performed.
-
-The website has not been published or connected to GoDaddy by this local preparation. No registrar credentials or private app data are included.
+The 13 pages were checked in Chrome at 1440, 1024, 768, 390 and 320 pixels: no horizontal overflow or broken images. Keyboard skip navigation, reduced motion, FAQ controls, local links, support email, offline/privacy wording and absence of third-party requests, cookies and browser storage were checked. These checks are not a full accessibility audit or a physical-device test.
