@@ -27,3 +27,7 @@ Spelloids' existing artwork and visual theme are retained. Multiploids uses the 
 ## Validation
 
 The 13 pages were checked in Chrome at 1440, 1024, 768, 390 and 320 pixels: no horizontal overflow or broken images. Keyboard skip navigation, reduced motion, FAQ controls, local links, support email, offline/privacy wording and absence of third-party requests, cookies and browser storage were checked. These checks are not a full accessibility audit or a physical-device test.
+
+## Divoids homepage feature
+
+The homepage introduces Divoids as a free browser playtest on Planet Moz, with its existing coral character and a direct /divoids/test/ link. Navigation, parent information and support include the playtest. Its application file is preserved byte for byte. divoids-home.css scopes the new card and announcement styling. The local-link checker treats the self-contained playtest separately from the static marketing documents.
